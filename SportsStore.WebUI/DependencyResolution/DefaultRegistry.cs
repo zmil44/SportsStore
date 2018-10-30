@@ -33,7 +33,7 @@ namespace SportsStore.WebUI.DependencyResolution {
 					scan.With(new ControllerConvention());
                 });
             For<IProductRepository>().Use<EFProductRepository>();
-            //For<IExample>().Use<Example>();
+            For<IOrderProcessor>().Use<EmailOrderProcessor>();
         }
 
         #endregion
