@@ -59,6 +59,9 @@ namespace SportsStore.WebUI.DependencyResolution {
             {
                 WriteAsFile = bool.Parse(ConfigurationManager.AppSettings["Email.WriteAsFile"] ?? "false")
             };
+
+            container.Inject<EmailSettings>(emailSettings);
+
             //Mock<IProductRepository> mock = new Mock<IProductRepository>();
             //mock.Setup(m => m.Products).Returns(new List<Product>
             //{
